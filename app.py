@@ -26,7 +26,7 @@ def signUp():
 
             # All Good, let's call MySQL
             #MySQL Connection Parameters
-            db = mysql.connector.connect(host='54.66.214.26', user='wow-db', passwd='2s2Hz@P15w*#',db='zero_realm')
+            db = mysql.connector.connect(host='host', user='user', passwd='password',db='db')
             cursor = db.cursor()
             cursor.callproc('create_account',(usrName,email,pssWd))
             data = cursor.fetchall()
